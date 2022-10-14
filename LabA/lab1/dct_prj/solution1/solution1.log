@@ -1,0 +1,290 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-1-e'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [Common 17-206] Exiting vivado_hls at Wed Oct 12 19:28:18 2022...
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-1-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'dct.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:05 ; elapsed = 00:00:16 . Memory (MB): peak = 1027.578 ; gain = 931.383
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:05 ; elapsed = 00:00:16 . Memory (MB): peak = 1027.578 ; gain = 931.383
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:05 ; elapsed = 00:00:17 . Memory (MB): peak = 1027.578 ; gain = 931.383
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'read_data' into 'dct' (dct.cpp:126) automatically.
+INFO: [XFORM 203-602] Inlining function 'write_data' into 'dct' (dct.cpp:131) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:05 ; elapsed = 00:00:17 . Memory (MB): peak = 1027.578 ; gain = 931.383
+INFO: [XFORM 203-602] Inlining function 'read_data' into 'dct' (dct.cpp:126) automatically.
+INFO: [XFORM 203-602] Inlining function 'write_data' into 'dct' (dct.cpp:131) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:18 . Memory (MB): peak = 1027.578 ; gain = 931.383
+INFO: [HLS 200-472] Inferring partial write operation for 'col_inbuf' (dct.cpp:82:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'out_block' (dct.cpp:93:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'dst' (dct.cpp:61:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'buf_2d_in' (dct.cpp:104:10)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:00:18 . Memory (MB): peak = 1027.578 ; gain = 931.383
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'dct' ...
+WARNING: [SYN 201-107] Renaming port name 'dct/input' to 'dct/input_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'dct/output' to 'dct/output_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dct_1d2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 18.379 seconds; current allocated memory: 189.038 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.125 seconds; current allocated memory: 189.221 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dct_2d' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.162 seconds; current allocated memory: 189.416 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.143 seconds; current allocated memory: 189.658 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dct' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.183 seconds; current allocated memory: 189.858 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.145 seconds; current allocated memory: 190.058 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dct_1d2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'dct_1d2_dct_coeff_table' to 'dct_1d2_dct_coeffbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dct_mac_muladd_15s_16s_32ns_32_1_1' to 'dct_mac_muladd_15cud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'dct_mac_muladd_15cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dct_1d2'.
+INFO: [HLS 200-111]  Elapsed time: 0.213 seconds; current allocated memory: 190.417 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dct_2d' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dct_2d'.
+INFO: [HLS 200-111]  Elapsed time: 0.36 seconds; current allocated memory: 191.545 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dct' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'dct/input_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dct/output_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'dct' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dct'.
+INFO: [HLS 200-111]  Elapsed time: 0.493 seconds; current allocated memory: 192.956 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 241.37 MHz
+INFO: [RTMG 210-279] Implementing memory 'dct_1d2_dct_coeffbkb_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'dct_2d_row_outbuf_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:10 ; elapsed = 00:00:23 . Memory (MB): peak = 1027.578 ; gain = 931.383
+INFO: [VHDL 208-304] Generating VHDL RTL for dct.
+INFO: [VLOG 209-307] Generating Verilog RTL for dct.
+INFO: [HLS 200-112] Total elapsed time: 23.019 seconds; peak allocated memory: 192.956 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-1-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'dct.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 1022.992 ; gain = 951.664
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:05 ; elapsed = 00:00:15 . Memory (MB): peak = 1022.992 ; gain = 951.664
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:05 ; elapsed = 00:00:16 . Memory (MB): peak = 1022.992 ; gain = 951.664
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'read_data' into 'dct' (dct.cpp:125) automatically.
+INFO: [XFORM 203-602] Inlining function 'write_data' into 'dct' (dct.cpp:130) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:05 ; elapsed = 00:00:16 . Memory (MB): peak = 1022.992 ; gain = 951.664
+INFO: [XFORM 203-602] Inlining function 'read_data' into 'dct' (dct.cpp:125) automatically.
+INFO: [XFORM 203-602] Inlining function 'write_data' into 'dct' (dct.cpp:130) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 1022.992 ; gain = 951.664
+INFO: [HLS 200-472] Inferring partial write operation for 'col_inbuf' (dct.cpp:82:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'out_block' (dct.cpp:93:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'dst' (dct.cpp:61:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'buf_2d_in' (dct.cpp:103:10)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 1022.992 ; gain = 951.664
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'dct' ...
+WARNING: [SYN 201-107] Renaming port name 'dct/input' to 'dct/input_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'dct/output' to 'dct/output_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dct_1d2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 17.486 seconds; current allocated memory: 189.047 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 189.231 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dct_2d' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.164 seconds; current allocated memory: 189.425 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.135 seconds; current allocated memory: 189.668 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dct' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.18 seconds; current allocated memory: 189.867 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.191 seconds; current allocated memory: 190.067 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dct_1d2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'dct_1d2_dct_coeff_table' to 'dct_1d2_dct_coeffbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dct_mac_muladd_15s_16s_32ns_32_1_1' to 'dct_mac_muladd_15cud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'dct_mac_muladd_15cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dct_1d2'.
+INFO: [HLS 200-111]  Elapsed time: 0.203 seconds; current allocated memory: 190.442 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dct_2d' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dct_2d'.
+INFO: [HLS 200-111]  Elapsed time: 0.282 seconds; current allocated memory: 191.554 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dct' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'dct/input_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dct/output_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'dct' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dct'.
+INFO: [HLS 200-111]  Elapsed time: 0.41 seconds; current allocated memory: 192.965 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 241.37 MHz
+INFO: [RTMG 210-279] Implementing memory 'dct_1d2_dct_coeffbkb_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'dct_2d_row_outbuf_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:10 ; elapsed = 00:00:22 . Memory (MB): peak = 1022.992 ; gain = 951.664
+INFO: [VHDL 208-304] Generating VHDL RTL for dct.
+INFO: [VLOG 209-307] Generating Verilog RTL for dct.
+INFO: [HLS 200-112] Total elapsed time: 22.259 seconds; peak allocated memory: 192.965 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-1-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'dct.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 1028.965 ; gain = 932.793
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 1028.965 ; gain = 932.793
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 1028.965 ; gain = 932.793
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'read_data' into 'dct' (dct.cpp:126) automatically.
+INFO: [XFORM 203-602] Inlining function 'write_data' into 'dct' (dct.cpp:131) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 1028.965 ; gain = 932.793
+INFO: [XFORM 203-602] Inlining function 'read_data' into 'dct' (dct.cpp:126) automatically.
+INFO: [XFORM 203-602] Inlining function 'write_data' into 'dct' (dct.cpp:131) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 1028.965 ; gain = 932.793
+INFO: [HLS 200-472] Inferring partial write operation for 'col_inbuf' (dct.cpp:82:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'out_block' (dct.cpp:93:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'dst' (dct.cpp:61:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'buf_2d_in' (dct.cpp:104:10)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 1028.965 ; gain = 932.793
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'dct' ...
+WARNING: [SYN 201-107] Renaming port name 'dct/input' to 'dct/input_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'dct/output' to 'dct/output_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dct_1d2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 14.132 seconds; current allocated memory: 189.078 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.125 seconds; current allocated memory: 189.246 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dct_2d' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.163 seconds; current allocated memory: 189.441 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.144 seconds; current allocated memory: 189.684 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dct' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.197 seconds; current allocated memory: 189.883 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 190.083 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dct_1d2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'dct_1d2_dct_coeff_table' to 'dct_1d2_dct_coeffbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'dct_mac_muladd_15s_16s_32ns_32_1_1' to 'dct_mac_muladd_15cud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'dct_mac_muladd_15cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dct_1d2'.
+INFO: [HLS 200-111]  Elapsed time: 0.205 seconds; current allocated memory: 190.442 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dct_2d' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dct_2d'.
+INFO: [HLS 200-111]  Elapsed time: 0.296 seconds; current allocated memory: 191.570 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dct' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'dct/input_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dct/output_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'dct' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dct'.
+INFO: [HLS 200-111]  Elapsed time: 0.516 seconds; current allocated memory: 192.981 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 241.37 MHz
+INFO: [RTMG 210-279] Implementing memory 'dct_1d2_dct_coeffbkb_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'dct_2d_row_outbuf_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1028.965 ; gain = 932.793
+INFO: [VHDL 208-304] Generating VHDL RTL for dct.
+INFO: [VLOG 209-307] Generating Verilog RTL for dct.
+INFO: [HLS 200-112] Total elapsed time: 18.889 seconds; peak allocated memory: 192.981 MB.
