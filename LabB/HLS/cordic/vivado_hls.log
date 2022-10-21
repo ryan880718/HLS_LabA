@@ -1,0 +1,70 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'access-user' on host 'desktop-m005ab9' (Windows NT_amd64 version 6.2) on Fri Oct 21 21:09:21 +0800 2022
+INFO: [HLS 200-10] In directory 'C:/Users/access-user/Desktop/HLS/LabB/HLS/cordic'
+Sourcing Tcl script 'C:/Users/access-user/Desktop/HLS/LabB/HLS/cordic/cordiccart2pol/solution1/csynth.tcl'
+INFO: [HLS 200-10] Opening project 'C:/Users/access-user/Desktop/HLS/LabB/HLS/cordic/cordiccart2pol'.
+INFO: [HLS 200-10] Adding design file 'cordiccart2pol.h' to the project
+INFO: [HLS 200-10] Adding design file 'cordiccart2pol.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'cordiccart2pol_test.cpp' to the project
+INFO: [HLS 200-10] Opening solution 'C:/Users/access-user/Desktop/HLS/LabB/HLS/cordic/cordiccart2pol/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'cordiccart2pol.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1027.914 ; gain = 931.637
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1027.914 ; gain = 931.637
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 1027.914 ; gain = 931.637
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 1027.914 ; gain = 931.637
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'cordiccart2pol' (cordiccart2pol.cpp:19).
+INFO: [HLS 200-489] Unrolling loop 'ROTATE' (cordiccart2pol.cpp:43) in function 'cordiccart2pol' completely with a factor of 16.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (cordiccart2pol.cpp:62:1) in function 'cordiccart2pol'... converting 4 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 1027.914 ; gain = 931.637
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 1027.914 ; gain = 931.637
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'cordiccart2pol' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Imp[2Kvivado_hls> [12C^Crt2pol' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'cordiccart2pol'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 248.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 11.934 seconds; current allocated memory: 161.547 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.875 seconds; current allocated memory: 164.188 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cordiccart2pol' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'cordiccart2pol/x' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cordiccart2pol/y' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cordiccart2pol/r' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cordiccart2pol/theta' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'cordiccart2pol' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'cordiccart2pol_fsub_32ns_32ns_32_5_full_dsp_1' to 'cordiccart2pol_fsbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'cordiccart2pol_fadd_32ns_32ns_32_5_full_dsp_1' to 'cordiccart2pol_facud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'cordiccart2pol_fmul_32ns_32ns_32_4_max_dsp_1' to 'cordiccart2pol_fmdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'cordiccart2pol_fptrunc_64ns_32_2_1' to 'cordiccart2pol_fpeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'cordiccart2pol_fpext_32ns_64_2_1' to 'cordiccart2pol_fpfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'cordiccart2pol_fcmp_32ns_32ns_1_2_1' to 'cordiccart2pol_fcg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'cordiccart2pol_dmul_64ns_64ns_64_6_max_dsp_1' to 'cordiccart2pol_dmhbi' due to the length limit 20
+INFO: [RTGEN 206-104] Estimated max fanout for 'cordiccart2pol' is 18934 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'cordiccart2pol_dmhbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'cordiccart2pol_facud': 15 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'cordiccart2pol_fcg8j': 17 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'cordiccart2pol_fmdEe': 76 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'cordiccart2pol_fpeOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'cordiccart2pol_fpfYi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'cordiccart2pol_fsbkb': 32 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cordiccart2pol'.
+INFO: [HLS 200-111]  Elapsed time: 1.93 seconds; current allocated memory: 174.016 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 125.72 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 1027.914 ; gain = 931.637
+INFO: [VHDL 208-304] Generating VHDL RTL for cordiccart2pol.
+INFO: [VLOG 209-307] Generating Verilog RTL for cordiccart2pol.
+INFO: [HLS 200-112] Total elapsed time: 22.915 seconds; peak allocated memory: 174.016 MB.
